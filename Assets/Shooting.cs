@@ -62,6 +62,7 @@ public class Shooting : MonoBehaviour
         isShooting = true;
         GameObject newFireball = Instantiate(fireball, firePoint.position, Quaternion.Euler(0, 0, 0)); //Spawn in bullet, rotated 270 degrees on z axis 
         newFireball.GetComponent<Rigidbody2D>().velocity = new Vector2(fireballSpeed * direction() * Time.fixedDeltaTime, 0f);
+        newFireball.GetComponent<Rigidbody2D>().gravityScale = 0;
         newFireball.transform.localScale = new Vector2(newFireball.transform.localScale.x * direction(), newFireball.transform.localScale.y);
         yield return new WaitForSeconds(shootingTimer);
         isShooting = false;

@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 259651139}
   m_Layer: 0
   m_Name: ground (8)
-  m_TagString: Ground
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,7 +284,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 259651138}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c0bb8794208db2c4aa7bbbca40659ee2, type: 2}
+  m_Material: {fileID: 6200000, guid: e3f2707ace80c8d499ceccbe78f776e8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 960180884}
   m_Layer: 0
   m_Name: ground (7)
-  m_TagString: Ground
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,7 +610,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 960180883}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c0bb8794208db2c4aa7bbbca40659ee2, type: 2}
+  m_Material: {fileID: 6200000, guid: e3f2707ace80c8d499ceccbe78f776e8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1080,7 +1080,7 @@ GameObject:
   - component: {fileID: 1519817408}
   m_Layer: 0
   m_Name: ground (4)
-  m_TagString: Ground
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1094,7 +1094,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1519817407}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c0bb8794208db2c4aa7bbbca40659ee2, type: 2}
+  m_Material: {fileID: 6200000, guid: e3f2707ace80c8d499ceccbe78f776e8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1697,7 +1697,7 @@ GameObject:
   - component: {fileID: 1834582707}
   m_Layer: 0
   m_Name: ground (6)
-  m_TagString: Ground
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1711,7 +1711,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1834582706}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c0bb8794208db2c4aa7bbbca40659ee2, type: 2}
+  m_Material: {fileID: 6200000, guid: e3f2707ace80c8d499ceccbe78f776e8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
