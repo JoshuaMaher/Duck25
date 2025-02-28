@@ -34,6 +34,18 @@ public class Movement : MonoBehaviour
         {
             Jump();
         }
+
+        if (move < 0 && facingRight) //If facing right but moves left - flip
+        {
+            facingRight = !facingRight;
+             gameObject.transform.localScale = new Vector3(-0.8f, 1.75f, 1);
+        }
+
+        if (move > 0 && !facingRight) //If facing left but moves right - flip
+        {
+             facingRight = !facingRight;
+             gameObject.transform.localScale = new Vector3(0.8f, 1.75f, 1);
+        }
         
     }
 
