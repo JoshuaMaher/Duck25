@@ -47,17 +47,6 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        int flip180() //Returns value of 180 or 0, depending on what way player is facing, flips fireball on y axis
-        {
-            if (script.facingRight == false)
-            {
-                return +180;
-            }
-            else
-            {
-                return 0;
-            }
-        }
 
         isShooting = true;
         GameObject newFireball = Instantiate(fireball, firePoint.position, Quaternion.Euler(0, 0, 0)); //Spawn in bullet, rotated 270 degrees on z axis 
