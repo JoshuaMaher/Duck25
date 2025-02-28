@@ -1,42 +1,64 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using MEC;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using MEC;
 
 public class Movement : MonoBehaviour
 {
-    public static Movement instance = null;
-    public float _movementSpeed = 10;
+    public float speed = 8;
+    private float move;
+
+    public Rigidbody2D rb;
+
+    public bool facingRight = true;
     public bool isJumping = false;
-    
+
+    public int jumpForce;
+
+
     void Start()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        rb = GetComponent<Rigidbody2D>();
+       
     }
-    
+
     void Update()
     {
-        Vector3 movement = new();
-        movement.x += Input.GetAxisRaw("Horizontal")*10;
-        GetComponent<Rigidbody2D>().AddForce(movement * Time.deltaTime * 100);
-        if (Input.GetAxis("Vertical") is float jump && jump >= 0.1f && !isJumping)
+   
+            move = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(speed * move, rb.velocity.y);
+      
+
+        if (Input.GetButtonDown("Jump"))
         {
+            Jump();
+        }
+        
+    }
+
+    void Jump()
+    {
+       if (!isJumping)
+       {
+            rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
             isJumping = true;
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jump * 100 * Time.deltaTime*1500));
-            Timing.CallDelayed(0.5f, () => { isJumping = false; });
+
+        }
+  
+    }
+
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+
         }
     }
 
-    private void FixedUpdate()
-    {
+    
 
-    }
 }
+
